@@ -24,7 +24,7 @@
     <li><a href="#experience">Skills</a></li>
     <li><a href="#projects">Projects</a></li>
      <li><a href="#contact">Contact</a></li>
-    <li><button id="theme-toggle" >🌙</button></li>
+    <li><button class="theme-toggle" >🌙</button></li>
   </ul>
 </div>
   </nav>
@@ -45,7 +45,7 @@
     <li><a href="#experience" onclick="togglemenu()">Skills</a></li>
     <li><a href="#projects" onclick="togglemenu()">Projects</a></li>
     <li><a href="#Contact" onclick="togglemenu()">Contact</a></li>
-     <li><button id="theme-toggle" onclick="togglemenu()">🌙</button></li>
+     <li><button class="theme-toggle" onclick="togglemenu()">🌙</button></li>
   </ul>
 
  
@@ -176,6 +176,21 @@
     
  
   };
+  const toggles = document.querySelectorAll(".theme-toggle");
+const body = document.body;
+
+toggles.forEach(toggle => {
+  toggle.addEventListener("click", () => {
+    body.classList.toggle("dark-theme");
+    body.classList.toggle("light-theme");
+
+    // Met à jour le texte sur tous les boutons
+    const isDark = body.classList.contains("dark-theme");
+    toggles.forEach(btn => btn.textContent = isDark ? "☀️" : "🌙");
+  });
+});
+
+  /*i did ths when i was using id for buttons 
   const toggle = document.getElementById("theme-toggle");
   const body = document.body;
 
@@ -203,6 +218,7 @@ document.body.appendChild(glow);
 document.addEventListener("scroll",(e) =>{
   glow.style.opacity=0;
 })*/
+
 </script>
 
 </body>

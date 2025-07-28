@@ -1,12 +1,97 @@
-@media screen and (max-width:1200px){
-#desktop{
+
+@media screen and (max-width: 1200px) {
+  #desktop {
     display: none;
-}
-#hamburger-nav{
+  }
+
+  #hamburger-nav {
     display: flex;
-}
-body.light-theme #profile {
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .menu-links {
+    display: none;
     flex-direction: column;
+    align-items: center;
+    background-color: var(--bg-color, #fff);
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 1rem;
+    border-radius: 10px;
+    z-index: 1000;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  }
+
+  .menu-links.open {
+    display: flex;
+  }
+
+  .hamburger-icon {
+    cursor: pointer;
+  }
+
+  .hamburger-icon span {
+    background-color: #333;
+  }
+
+  body.dark-theme .hamburger-icon span {
+    background-color: #fff;
+  }
 }
 
+/* PROFILE SECTION */
+@media screen and (max-width: 768px) {
+  #profile {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .profileimage img {
+    width: 200px;
+    margin-top: 1.5rem;
+  }
+
+  .btn-container {
+    justify-content: center;
+  }
+}
+
+/* SKILLS SECTION */
+@media screen and (max-width: 768px) {
+  .section-skills {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .skills {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .img-skills img {
+    max-width: 250px;
+  }
+}
+
+/* PROJECTS */
+@media screen and (max-width: 768px) {
+  .project-card {
+    width: 90%;
+  }
+}
+
+/* CONTACT SECTION */
+@media screen and (max-width: 768px) {
+  .contact {
+    padding: 2rem 1rem;
+  }
+
+  .email {
+    width: 100%;
+  }
 }
