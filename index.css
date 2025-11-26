@@ -27,7 +27,7 @@ body.dark-theme {
   --btn-color: #C8ACD6;
   --btn-hover-bg: #C8ACD6;
   --btn-hover-color: #433D8B;
-   --hamburger-color: #C8ACD6;
+   --hamburger-color: #433D8B;
   --nav-bg: #1a1a1a;
   --section-bg: #1a1a1a;
 }
@@ -223,12 +223,12 @@ nav {
 }
 .projects{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-around;
   align-items: center;
   scroll-snap-align: var(--snap-align);
   height: 100vh;
-  padding: 1.5rem;
+  
   background-color: var(--section-bg);
   column-gap: 0px;
 }
